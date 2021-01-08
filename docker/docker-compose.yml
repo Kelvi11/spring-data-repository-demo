@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  postgresql:
+    image: postgres:11
+    environment:
+      POSTGRES_PASSWORD: blog
+      POSTGRES_USER: blog
+      POSTGRES_DB: blog
+    ports:
+      - '5432:5432'
+#  pgadmin4:
+#    image: dpage/pgadmin4
+#    ports:
+#      - '5050:5050'
+#      - '85:80'
+#    links:
+#      - postgresql:postgresql
+#    depends_on:
+#      - postgresql
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: blog@blog.com
+#      PGADMIN_DEFAULT_PASSWORD: blog
